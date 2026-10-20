@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #1e1e1e; /* Warna latar gelap */
+    background-color: #1e1e1e;
     font-family: Arial, sans-serif;
     color: #ffffff;
     display: flex;
@@ -24,7 +24,7 @@ body {
 }
 
 .green {
-    color: #2ecc71; /* Warna hijau khas */
+    color: #2ecc71;
 }
 
 /* Header */
@@ -96,26 +96,28 @@ input:focus {
 
 .items-header {
     display: flex;
-    justify-content: space-between;
     border-bottom: 1px solid #7f8c8d;
     padding-bottom: 10px;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .item-row {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 15px;
-    gap: 20px;
+    gap: 15px;
+    align-items: center;
 }
 
-.item-name {
-    flex: 2;
-}
+/* Pengaturan Lebar Kolom */
+.item-col { flex: 2.5; }
+.price-col { flex: 1.2; text-align: right; }
+.qty-col { flex: 0.6; text-align: center; }
+.amount-col { flex: 1.2; text-align: right; }
 
 .item-amount {
-    flex: 1;
-    text-align: right;
+    font-size: 16px;
+    color: #ffffff;
 }
 
 .add-btn {
@@ -189,7 +191,7 @@ footer p {
     border-radius: 5px;
 }
 
-/* Khusus saat dicetak ke PDF, sembunyikan tombol dan efek kotak input */
+/* Khusus PDF */
 @media print {
     body { background-color: #2b2d2f; }
     .no-print { display: none !important; }
