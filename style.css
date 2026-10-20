@@ -198,4 +198,14 @@ footer p {
     .invoice-container { box-shadow: none; padding: 0; width: 100%; max-width: 100%; }
     input { border-bottom: 1px solid #555; }
     input::placeholder { color: transparent; }
+
+    /* Khusus PDF */
+@media print {
+    @page { margin: 0; } /* Menghilangkan URL dan Tanggal bawaan browser */
+    body { background-color: #2b2d2f; padding: 20px; } /* Memberi jarak agar tidak mentok ujung kertas */
+    .no-print { display: none !important; }
+    .invoice-container { box-shadow: none; padding: 0; width: 100%; max-width: 100%; }
+    input { border-bottom: 1px solid #555; }
+    input::placeholder { color: transparent; }
+}
 }
