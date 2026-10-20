@@ -32,6 +32,7 @@
         <!-- Item Info -->
         <section class="section-block">
             <h3 class="green">ITEM INFO</h3>
+            <!-- Dikembalikan menjadi 1 baris -->
             <div class="input-group">
                 <label>Brand / Color</label>
                 <input type="text" placeholder="Contoh: Nike / White">
@@ -41,14 +42,18 @@
         <!-- Items Table -->
         <section class="items-section">
             <div class="items-header">
-                <span class="green">ITEM</span>
-                <span class="green">AMOUNT</span>
+                <span class="green item-col">ITEM</span>
+                <span class="green price-col">PRICE</span>
+                <span class="green qty-col">QTY</span>
+                <span class="green amount-col">AMOUNT</span>
             </div>
             <div id="items-list">
-                <!-- Baris item akan muncul di sini -->
+                <!-- Baris item -->
                 <div class="item-row">
-                    <input type="text" class="item-name" placeholder="Nama layanan (misal: Deep Clean)">
-                    <input type="number" class="item-amount" placeholder="0" oninput="calculateTotal()">
+                    <input type="text" class="item-name item-col" placeholder="Nama layanan...">
+                    <input type="number" class="item-price price-col" placeholder="Harga" oninput="calculateTotal()">
+                    <input type="number" class="item-qty qty-col" placeholder="1" oninput="calculateTotal()">
+                    <span class="item-amount amount-col">Rp 0</span>
                 </div>
             </div>
             <button class="add-btn no-print" onclick="addItem()">+ Tambah Item</button>
@@ -84,7 +89,6 @@
         </footer>
     </div>
 
-    <!-- Tombol untuk Cetak/Save PDF -->
     <button class="print-btn no-print" onclick="window.print()">Simpan ke PDF</button>
 
     <script src="script.js"></script>
