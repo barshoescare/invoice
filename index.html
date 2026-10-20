@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Bar Shoescare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <span class="green">&lt;/</span>BAR SHOESCARE<span class="green">&gt;</span>
+            </div>
+            <div class="title">INVOICE</div>
+        </header>
+
+        <!-- Customer Info -->
+        <section class="section-block">
+            <h3 class="green">CUSTOMER INFO</h3>
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Masukkan nama pelanggan...">
+            </div>
+            <div class="input-group">
+                <label>No</label>
+                <input type="text" placeholder="Masukkan nomor WA/HP...">
+            </div>
+        </section>
+
+        <!-- Item Info -->
+        <section class="section-block">
+            <h3 class="green">ITEM INFO</h3>
+            <div class="input-group">
+                <label>Brand / Color</label>
+                <input type="text" placeholder="Contoh: Nike / White">
+            </div>
+        </section>
+
+        <!-- Items Table -->
+        <section class="items-section">
+            <div class="items-header">
+                <span class="green">ITEM</span>
+                <span class="green">AMOUNT</span>
+            </div>
+            <div id="items-list">
+                <!-- Baris item akan muncul di sini -->
+                <div class="item-row">
+                    <input type="text" class="item-name" placeholder="Nama layanan (misal: Deep Clean)">
+                    <input type="number" class="item-amount" placeholder="0" oninput="calculateTotal()">
+                </div>
+            </div>
+            <button class="add-btn no-print" onclick="addItem()">+ Tambah Item</button>
+        </section>
+
+        <!-- Status & Total -->
+        <section class="status-total-section">
+            <div class="status">
+                Status: <span class="green" contenteditable="true">PAID</span>
+            </div>
+            <div class="total-box">
+                <span class="green">Total</span>
+                <span class="total-value" id="total-amount">Rp 0</span>
+            </div>
+        </section>
+
+        <!-- Terms & Conditions -->
+        <section class="terms">
+            <h4 class="green">Terms And Conditions</h4>
+            <ol>
+                <li>Kerusakan bawaan sebelum dicuci bukan tanggung jawab Bar Shoescare.</li>
+                <li>Sepatu tidak diambil >30 hari di luar tanggung jawab kami.</li>
+            </ol>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Thank you for trusting Bar Shoescare.</p>
+            <div class="contact-info">
+                <span>IG/TIKTOK : barshoescare</span>
+                <span>Whatsapp: 081159230600</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Tombol untuk Cetak/Save PDF -->
+    <button class="print-btn no-print" onclick="window.print()">Simpan ke PDF</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
